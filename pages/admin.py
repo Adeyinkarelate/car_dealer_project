@@ -16,21 +16,4 @@ class TeamAdmin(admin.ModelAdmin):
     search_fields = ('first_name', 'designation')
     list_filter = ('designation',)
 
-"""
-NB: we want to have image display on the admin dashboard
-sod we need to import format_html
-from django.utils.html import format_html
 
-the we create a function inside the model, with self and all the object
-self, referring to the class and object, mean all the object
-
-def thumbnail(self, object):
-        return format_html('<img src="{}" width="40" />'.format(object.photo.url))
-
-.. then we can display those images on the admin panel
-
-to change the name being display on the admin panel
-
-thumbnail.short_description = 'Team Image'
-
-"""
